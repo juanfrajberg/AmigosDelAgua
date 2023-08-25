@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_rowWeight="1"
+    android:layout_columnWeight="1"
+    android:layout_gravity="fill"
+    android:layout_margin="@dimen/_5sdp"
+    android:backgroundTint="@color/white"
+    android:onClick="optionSelected"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:src="@drawable/survey_waterdrop_icon"
+            app:tint="#03A9F4">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lilita_one"
+            android:text="Opción N°1"
+            android:textColor="#2196F3"
+            android:textSize="@dimen/_20ssp">
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

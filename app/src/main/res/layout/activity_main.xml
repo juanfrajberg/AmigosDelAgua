@@ -14,6 +14,7 @@
         android:layout_marginTop="@dimen/_25sdp"
         android:fontFamily="@font/lilita_one"
         android:text="Pregunta N°1"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_42ssp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -36,6 +37,7 @@
             android:layout_height="match_parent">
 
             <GridLayout
+                android:id="@+id/survey_options_gridlayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:columnCount="2"
@@ -50,7 +52,8 @@
                     android:layout_margin="@dimen/_5sdp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="@dimen/_5sdp"
-                    app:cardElevation="@dimen/_5sdp">
+                    app:cardElevation="@dimen/_5sdp"
+                    android:onClick="optionSelected">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -62,6 +65,8 @@
                         <ImageView
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
                             android:src="@drawable/survey_waterdrop_icon"
                             app:tint="#03A9F4">
                         </ImageView>
@@ -69,7 +74,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
                             android:fontFamily="@font/lilita_one"
                             android:text="Opción N°1"
                             android:textColor="#2196F3"
@@ -89,7 +95,8 @@
                     android:layout_margin="@dimen/_5sdp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="@dimen/_5sdp"
-                    app:cardElevation="@dimen/_5sdp">
+                    app:cardElevation="@dimen/_5sdp"
+                    android:onClick="optionSelected">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -101,6 +108,8 @@
                         <ImageView
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
                             android:src="@drawable/survey_waterdrop_icon"
                             app:tint="#03A9F4">
                         </ImageView>
@@ -108,7 +117,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
                             android:fontFamily="@font/lilita_one"
                             android:text="Opción N°2"
                             android:textColor="#2196F3"
@@ -128,7 +138,8 @@
                     android:layout_margin="@dimen/_5sdp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="@dimen/_5sdp"
-                    app:cardElevation="@dimen/_5sdp">
+                    app:cardElevation="@dimen/_5sdp"
+                    android:onClick="optionSelected">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -140,6 +151,8 @@
                         <ImageView
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
                             android:src="@drawable/survey_waterdrop_icon"
                             app:tint="#03A9F4">
                         </ImageView>
@@ -147,7 +160,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
                             android:fontFamily="@font/lilita_one"
                             android:text="Opción N°3"
                             android:textColor="#2196F3"
@@ -167,7 +181,8 @@
                     android:layout_margin="@dimen/_5sdp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="@dimen/_5sdp"
-                    app:cardElevation="@dimen/_5sdp">
+                    app:cardElevation="@dimen/_5sdp"
+                    android:onClick="optionSelected">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -179,6 +194,8 @@
                         <ImageView
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
                             android:src="@drawable/survey_waterdrop_icon"
                             app:tint="#03A9F4">
                         </ImageView>
@@ -186,7 +203,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
                             android:fontFamily="@font/lilita_one"
                             android:text="Opción N°4"
                             android:textColor="#2196F3"
