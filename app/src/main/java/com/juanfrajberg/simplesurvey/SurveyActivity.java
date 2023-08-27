@@ -53,7 +53,7 @@ public class SurveyActivity extends AppCompatActivity {
             TextView thanksText = (TextView) findViewById(R.id.survey_thanks_textview);
             greyPanel.setVisibility(View.VISIBLE);
             greyPanel.setAlpha(0f);
-            greyPanel.animate().alpha(0.75f).setDuration(1000);
+            greyPanel.animate().alpha(0.75f).setDuration(750);
 
             //Se espera a que termine la animación del panel (View) y aparece el GIF
             Handler waitPanelAnimation = new Handler();
@@ -64,15 +64,19 @@ public class SurveyActivity extends AppCompatActivity {
 
                     lottieAnimation.setScaleX(0);
                     lottieAnimation.setScaleY(0);
-                    thanksText.setScaleX(0);
-                    thanksText.setRotationX(0);
+                    //thanksText.setScaleX(0);
+                    ///thanksText.setRotationX(0);
 
                     lottieAnimation.animate().scaleX(3).setDuration(750);
                     lottieAnimation.animate().scaleY(3).setDuration(750);
-                    thanksText.animate().scaleX(1).setDuration(750);
-                    thanksText.animate().rotationX(360).setDuration(750);
+                    //thanksText.animate().scaleX(1).setDuration(750);
+                    //thanksText.animate().rotationX(360).setDuration(750);
+                    YoYo.with(Techniques.SlideInUp)
+                            .duration(750)
+                            .repeat(0)
+                            .playOn(thanksText);
                 }
-            }, 1000);
+            }, 500);
 
             //Para que no se puedan seleccionar más opciones
             optionClickable = false;

@@ -42,7 +42,7 @@
             android:textSize="@dimen/_35ssp"
             android:gravity="center_horizontal"
             app:layout_constraintTop_toBottomOf="@id/survey_thumbsupanimation_lottieanimationview"
-            android:text="¡Gracias por cuidar mi planeta!">
+            android:text="¡Gracias por cuidar mi planeta! 😁">
         </TextView>
 
     </LinearLayout>
