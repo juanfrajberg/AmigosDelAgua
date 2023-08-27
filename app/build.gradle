@@ -39,4 +39,5 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.1.0' //Tamaño de layout responsive
     implementation 'com.intuit.ssp:ssp-android:1.1.0' //Tamaño de texto responsive
     implementation 'com.daimajia.androidanimations:library:2.4@aar' //Animación de elementos
+    implementation "com.airbnb.android:lottie:6.1.0" //Gifs de LottieFiles
 }

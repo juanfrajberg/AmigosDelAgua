@@ -2,10 +2,50 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/survey_layout_constraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/survey_halfcircle_background"
     tools:context=".SurveyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:elevation="5dp"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/survey_thumbsupanimation_lottieanimationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scaleX="3"
+            android:scaleY="3"
+            app:lottie_rawRes="@raw/happydog_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:id="@+id/survey_thanks_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/lilita_one"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_35ssp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/survey_thumbsupanimation_lottieanimationview"
+            android:text="¡Gracias por cuidar mi planeta!">
+        </TextView>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/survey_title_textview"
@@ -180,5 +220,17 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <View
+        android:id="@+id/survey_panel_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </View>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,21 @@
 package com.juanfrajberg.simplesurvey;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.Window;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+
+import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -21,6 +27,9 @@ public class SurveyActivity extends AppCompatActivity {
     //Variable para el número de la pregunta en el títutlo
     private int numberQuestion = 1;
 
+    //Pära saber si se ha reproducido la animación de festejo
+    private boolean animationPlayed = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //Código básico para que se muestre la interfaz
@@ -30,8 +39,48 @@ public class SurveyActivity extends AppCompatActivity {
 
     //Función cuando se hace clic en una opción (tarjeta)
     public void optionSelected(View view) {
+        //Se verifica si ya es la última preguntar, en caso de ser así se festeja
+        if (numberQuestion == 3 && !animationPlayed) {
+            //Se reproduce la animación de clic en la opción elegida
+            YoYo.with(Techniques.Pulse)
+                    .duration(300)
+                    .repeat(0)
+                    .playOn(view);
+
+            //Se oscurece el fondo y se muestra la animación
+            LottieAnimationView lottieAnimation = (LottieAnimationView) findViewById(R.id.survey_thumbsupanimation_lottieanimationview);
+            View greyPanel = (View) findViewById(R.id.survey_panel_view);
+            TextView thanksText = (TextView) findViewById(R.id.survey_thanks_textview);
+            greyPanel.setVisibility(View.VISIBLE);
+            greyPanel.setAlpha(0f);
+            greyPanel.animate().alpha(0.75f).setDuration(1000);
+
+            //Se espera a que termine la animación del panel (View) y aparece el GIF
+            Handler waitPanelAnimation = new Handler();
+            waitPanelAnimation.postDelayed(new Runnable() {
+                public void run() {
+                    lottieAnimation.setVisibility(View.VISIBLE);
+                    thanksText.setVisibility(View.VISIBLE);
+
+                    lottieAnimation.setScaleX(0);
+                    lottieAnimation.setScaleY(0);
+                    thanksText.setScaleX(0);
+                    thanksText.setRotationX(0);
+
+                    lottieAnimation.animate().scaleX(3).setDuration(750);
+                    lottieAnimation.animate().scaleY(3).setDuration(750);
+                    thanksText.animate().scaleX(1).setDuration(750);
+                    thanksText.animate().rotationX(360).setDuration(750);
+                }
+            }, 1000);
+
+            //Para que no se puedan seleccionar más opciones
+            optionClickable = false;
+            animationPlayed = true;
+        }
+
         //Se verifica si se puede hacer clic en la opción, primero tienen que reproducirse las animaciones
-        if (optionClickable) {
+        if (optionClickable && !animationPlayed) {
             YoYo.with(Techniques.Pulse)
                     .duration(300)
                     .repeat(0)
