@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/SimpleSurvey/app/src/main/res/layout/activity_main.xml" value="0.2325657894736842" />
         <entry key="..\:/SimpleSurvey/app/src/main/res/layout/option_layout.xml" value="0.2325657894736842" />
+        <entry key="..\:/SimpleSurvey/app/src/main/res/layout/optionfilled_layout.xml" value="0.2325657894736842" />
+        <entry key="..\:/SimpleSurvey/app/src/main/res/layout/survey_activity.xml" value="0.2325657894736842" />
+        <entry key="..\:/SimpleSurvey/app/src/main/res/layout/unevenlastoption_layout.xml" value="0.2325657894736842" />
       </map>
     </option>
   </component>
