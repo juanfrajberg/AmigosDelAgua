@@ -8,44 +8,52 @@
     android:background="@drawable/survey_halfcircle_background"
     tools:context=".SurveyActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:visibility="visible"
         android:elevation="5dp"
-        android:gravity="center_vertical|center_horizontal"
+        android:scrollbars="none"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/survey_thumbsupanimation_lottieanimationview"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:scaleX="3"
-            android:scaleY="3"
-            app:lottie_rawRes="@raw/happydog_animation"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"/>
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
 
-        <TextView
-            android:id="@+id/survey_thanks_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:fontFamily="@font/lilita_one"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_35ssp"
-            android:gravity="center_horizontal"
-            app:layout_constraintTop_toBottomOf="@id/survey_thumbsupanimation_lottieanimationview"
-            android:text="¡Gracias por cuidar mi planeta! 😁">
-        </TextView>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/survey_thumbsupanimation_lottieanimationview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:scaleX="3"
+                android:scaleY="3"
+                app:lottie_rawRes="@raw/happydog_animation"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/survey_thanks_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:fontFamily="@font/lilita_one"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_35ssp"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/survey_thumbsupanimation_lottieanimationview"
+                android:text="¡Gracias por cuidar mi planeta! 😁">
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <TextView
         android:id="@+id/survey_title_textview"

@@ -40,7 +40,7 @@ public class SurveyActivity extends AppCompatActivity {
     //Función cuando se hace clic en una opción (tarjeta)
     public void optionSelected(View view) {
         //Se verifica si ya es la última preguntar, en caso de ser así se festeja
-        if (numberQuestion == 3 && !animationPlayed) {
+        if (numberQuestion == 10 && !animationPlayed) {
             //Se reproduce la animación de clic en la opción elegida
             YoYo.with(Techniques.Pulse)
                     .duration(300)
@@ -61,22 +61,26 @@ public class SurveyActivity extends AppCompatActivity {
                 public void run() {
                     lottieAnimation.setVisibility(View.VISIBLE);
                     thanksText.setVisibility(View.VISIBLE);
+                    thanksText.setTextColor(Color.TRANSPARENT);
 
                     lottieAnimation.setScaleX(0);
                     lottieAnimation.setScaleY(0);
-                    //thanksText.setScaleX(0);
-                    ///thanksText.setRotationX(0);
 
                     lottieAnimation.animate().scaleX(3).setDuration(750);
                     lottieAnimation.animate().scaleY(3).setDuration(750);
-                    //thanksText.animate().scaleX(1).setDuration(750);
-                    //thanksText.animate().rotationX(360).setDuration(750);
-                    YoYo.with(Techniques.SlideInUp)
-                            .duration(750)
-                            .repeat(0)
-                            .playOn(thanksText);
+
+                    Handler waitDogAnimation = new Handler();
+                    waitDogAnimation.postDelayed(new Runnable() {
+                        public void run() {
+                            thanksText.setTextColor(Color.WHITE);
+                            YoYo.with(Techniques.SlideInUp)
+                                    .duration(750)
+                                    .repeat(0)
+                                    .playOn(thanksText);
+                        }
+                    }, 750);
                 }
-            }, 500);
+            }, 750);
 
             //Para que no se puedan seleccionar más opciones
             optionClickable = false;
