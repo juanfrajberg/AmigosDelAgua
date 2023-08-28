@@ -73,7 +73,7 @@ public class SurveyActivity extends AppCompatActivity {
                     waitDogAnimation.postDelayed(new Runnable() {
                         public void run() {
                             thanksText.setTextColor(Color.WHITE);
-                            YoYo.with(Techniques.SlideInUp)
+                            YoYo.with(Techniques.FadeInUp)
                                     .duration(750)
                                     .repeat(0)
                                     .playOn(thanksText);
