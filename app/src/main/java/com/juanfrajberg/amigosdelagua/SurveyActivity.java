@@ -1,21 +1,17 @@
-package com.juanfrajberg.simplesurvey;
+package com.juanfrajberg.amigosdelagua;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.Window;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 

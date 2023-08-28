@@ -1,4 +1,4 @@
-package com.juanfrajberg.simplesurvey;
+package com.juanfrajberg.amigosdelagua;
 
 import android.content.Context;
 
