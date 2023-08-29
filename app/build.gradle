@@ -6,7 +6,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.juanfrajberg.simplesurvey"
+        applicationId "com.juanfrajberg.amigosdelagua"
         minSdk 21
         targetSdk 33
         versionCode 1
